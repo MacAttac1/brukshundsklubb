@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brukshundsklubben</title>
 
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <header>
+        <div class="container">
+          <div id="headerContent">
+            <div id="logo">
+              <h1>Brukshundsklubben</h1>
+            </div>
+            <div id="userStatus">
+              <p>Ej inloggad</p>
+              <button type="button" id="logOutBtn" class="hidden">Logga ut</button>
+            </div>
+          </div>
+        </div>
+      </header>
+    </header>
+    <main>
+      <section id="heroSection">
+        <div class="container heroContent">
+          <section id="welcome">
+            <h2>Välkommen till klubben!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, perspiciatis.</p>
+            </section>
+            <section class="loginSection">
+              <input type="text" id="userName" placeholder="Användarnamn" />
+              <input type="password" id="password" placeholder="Lösenord" />
+              <button type="button" id="logInBtn">Logga in</button>
+                <div class="loginErrorSection hidden">
+                  <p>Felaktigt användarnamn eller lösenord!</p>
+                  <br>
+                  <button type="button" id="reloadBtn">Försök igen!</button>
+                </div>
+            </section>
+          </div>
+          </section>
+        <section id="rulesSection">
+          <div class="container contentFlex">
+            <div>
+              <h3>Regel 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum explicabo illo error suscipit deleniti vero similique accusamus reprehenderit quia tenetur, asperiores alias tempora architecto perspiciatis facere ratione dolore! Ratione perspiciatis commodi explicabo aperiam quos, doloremque aut amet tempora dolore nemo!
+              </p>
+            </div>
+            <div>
+              <h3>Regel 2</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quos in laboriosam, neque eligendi quo officiis laborum, error perspiciatis delectus recusandae non exercitationem sunt. Eaque magni excepturi nulla consectetur amet quae consequatur velit. Architecto pariatur maiores, laborum consequuntur laboriosam dolores facere corporis consequatur deleniti quis eos reiciendis similique mollitia provident?
+              </p>
+            </div>
+            <div>
+              <h3>Regel 3</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quidem in illo iste autem! Dolore iste accusamus saepe quos quis placeat reprehenderit corrupti vero ea blanditiis animi, odit beatae, laborum molestias nemo. Harum, esse eum minima quaerat sequi doloribus! Hic ad exercitationem alias. Quisquam, nihil? Molestias aspernatur facilis ipsa quod?
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="imagesSection">
+          <div class="container contentFlex">
+            <div>
+              <img src="./assets/images/dog3-small.jpg" alt="Bild på en hund">
+            </div>
+            <div>
+              <img src="./assets/images/dog4-small.jpg" alt="Bild på en hund">
+            </div>
+            <div>
+              <img src="./assets/images/dog5-small.jpg" alt="Bild på en hund">
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="container">
+          <p> &copy; 2023 | Brukshundsklubben</p>
+          <br>
+          <p>Jyckegatan 3 <br>
+          123 45 Voffköping</p>
+        </div>
+      </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
