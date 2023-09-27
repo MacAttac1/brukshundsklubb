@@ -3,8 +3,8 @@ const usrName = "Bella";
 const pswd = "qwe123";
 
 // Locally stored user data
-const storedUserName = localStorage.getItem("userName");
-const storedPassword = localStorage.getItem("password");
+let storedUserName = localStorage.getItem("userName");
+let storedPassword = localStorage.getItem("password");
 
 // DOM elements
 const logInBtn = document.getElementById("logInBtn");
@@ -42,20 +42,21 @@ logOutBtn.addEventListener("click", function () {
 
 // Execute login
 function login() {
-  // Change login status message in header
-  userStatusMessage.textContent =
-    "Välkommen " + storedUserName + ", du är nu inloggad";
-
   loginSection.classList.add("hidden"); // Hide login section
   logOutBtn.classList.remove("hidden"); // Show logout button
 
   // Check if user name and password sould be stored in local storage
   if (storedUserName === null) {
     localStorage.setItem("userName", inputUserName.value);
+    storedUserName = localStorage.getItem("userName");
   }
   if (storedPassword === null) {
     localStorage.setItem("password", inputPassword.value);
+    storedPassword = localStorage.getItem("password");
   }
+  // Change login status message in header
+  userStatusMessage.textContent =
+    "Välkommen " + storedUserName + ", du är nu inloggad";
 }
 
 // Execute logout
