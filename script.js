@@ -16,30 +16,6 @@ const loginErrorSection = document.querySelector(".loginErrorSection");
 let inputUserName = document.getElementById("userName");
 let inputPassword = document.getElementById("password");
 
-// If stored user = static user, login
-if (storedUserName === usrName && storedPassword === pswd) {
-  login();
-}
-
-// Login button listener
-logInBtn.addEventListener("click", function () {
-  if (inputUserName.value === usrName && inputPassword.value === pswd) {
-    login();
-  } else {
-    loginErrorSection.classList.remove("hidden");
-  }
-});
-
-// Try again button listener
-reloadBtn.addEventListener("click", function () {
-  location.reload();
-});
-
-// Logout button listener
-logOutBtn.addEventListener("click", function () {
-  logout();
-});
-
 // Execute login
 function login() {
   loginSection.classList.add("hidden"); // Hide login section
@@ -70,3 +46,27 @@ function logout() {
 
   userStatusMessage.textContent = "Ej inloggad"; // Re-set status message in header
 }
+
+// If stored user = static user, login
+if (storedUserName === usrName && storedPassword === pswd) {
+  login();
+}
+
+// Login button listener
+logInBtn.addEventListener("click", function () {
+  if (inputUserName.value === usrName && inputPassword.value === pswd) {
+    login();
+  } else {
+    loginErrorSection.classList.remove("hidden");
+  }
+});
+
+// Try again button listener
+reloadBtn.addEventListener("click", function () {
+  location.reload();
+});
+
+// Logout button listener
+logOutBtn.addEventListener("click", function () {
+  logout();
+});
